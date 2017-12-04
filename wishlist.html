@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
 		<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
@@ -9,11 +9,13 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/owl.carousel.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css"/>
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/jquery.sticky.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/ajax.js"></script>
 
 	
 		<title></title>
@@ -294,7 +296,7 @@
 				</div>
 			</div>
 		</div>
-			<div class="footer-top-area">
+		<div class="footer-top-area">
 			<div class="zizag-bottom"></div>
 			<div class="container">
 				<div class="row">
@@ -316,19 +318,19 @@
 							<h2 class="footer-wid-title">用户导航</h2>
 							<ul>
 								<li>
-									<a href="#">我的帐户</a>
+									<a href="account.html">我的帐户</a>
 								</li>
 								<li>
-									<a href="#">订单历史</a>
+									<a href="account.html">订单历史</a>
 								</li>
 								<li>
-									<a href="#">收藏夹</a>
+									<a href="wishlist.html">收藏夹</a>
 								</li>
 								<li>
-									<a href="#">供应商联络</a>
+									<a href="other.html">供应商联络</a>
 								</li>
 								<li>
-									<a href="#">头版</a>
+									<a href="index.html">头版</a>
 								</li>
 							</ul>
 						</div>
@@ -338,19 +340,19 @@
 							<h2 class="footer-wid-title">商品种类</h2>
 							<ul>
 								<li>
-									<a href="#">移动电话</a>
+									<a href="category.html">移动电话</a>
 								</li>
 								<li>
-									<a href="#">家居配件 </a>
+									<a href="category.html">家居配件 </a>
 								</li>
 								<li>
-									<a href="#">LED电视</a>
+									<a href="category.html#led-tv">LED电视</a>
 								</li>
 								<li>
-									<a href="#">电脑</a>
+									<a href="category.html">电脑</a>
 								</li>
 								<li>
-									<a href="#">小型电器</a>
+									<a href="category.html">小型电器</a>
 								</li>
 							</ul>
 						</div>
@@ -360,10 +362,8 @@
 							<h2 class="footer-wid-title">期刊</h2>
 							<p>登录到我们的期刊，得到你不会在其他地方找到的独家优惠,我们会将它直接发送到你的收信信箱</p>
 							<div class="newsletter-form">
-								<form action="#">
-									<input placeholder="填入您的电子邮件 " type="email">
-									<input value="订购" type="submit">
-								</form>
+								<input id="footer-newsletter-input" placeholder="填入您的电子邮件" type="email">
+								<input id="footer-newsletter-button" value="订购" type="submit">
 							</div>
 						</div>
 					</div>

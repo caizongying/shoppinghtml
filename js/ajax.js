@@ -3,13 +3,13 @@ $(document).ready(function() {
 		var a=$.ajax({
             type: 'POST',
             data: "email="+$('#footer-newsletter-input').val(),
-            dataType: 'json',
 			url: "http://localhost:8090/email",
-			success: function() {
-				alert("订购成功");
+            dataType: 'json',
+			success:function(data) {
+				alert(data);
 			},
 			error: function(error) {
-				alert("订购失败");
+				alert(error);
 			}
 		})
 		alert("234");
@@ -21,17 +21,37 @@ $(document).ready(function() {
 			  password:$("#billing_password").val()
 		};
 		var b=$.ajax({
-            type: 'POST',
+             type: 'POST',
 			  data:params,
 			  url:"http://localhost:8090/login",
-			  dataType:'json',
+            dataType: 'json',
 			success:function(data){
-            alert("登录成功");
+            alert(data);
 		},
 		      error:function(data){
-                  alert("登录失败");
+                  alert(data);
 			  }});
     });
 
-
+	$("#contact-submit").click(function(){
+		var params={
+            firstname:$("#billing_first_name").val(),
+			lastname:$("#billing_last_name").val(),
+            city:$("#billing_city").val(),
+            email:$("#billing_email").val(),
+            phone:$("#billing_phone").val(),
+            username:$("#order_comments").val(),
+		};
+		var c=$.ajax({
+			 type:"POST",
+			 url:"http://localhost:8090/contact",
+			data:params,
+			dataType: 'json',
+            success:function(data){
+                alert(data);
+            },
+            error:function(data){
+                alert(data);
+            } });
+	});
 });
